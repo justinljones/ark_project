@@ -8,14 +8,15 @@
         {% block stylesheets %}
             <link rel="stylesheet" 
                   type="text/css" 
-                  href="{{ asset('web/css/bootstrap.min.css') }}" >
+                  href="{{ asset('css/bootstrap.min.css') }}" >
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="web/js/bootstrap.min.js"></script>
+            <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
         {% endblock %}
     </body>
 </html>
