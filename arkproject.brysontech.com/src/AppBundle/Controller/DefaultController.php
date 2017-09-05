@@ -25,7 +25,7 @@ class DefaultController extends Controller
     public function loginAction (Request $request)
     {
         return $this->render('Login/login.html.twig',[
-            $username = $_POST['username'],
+            $username = isset($_POST['username'])   ?$_POST['username'] : false,
             $pwd      = $_POST['pwd']
         ]);
     }
