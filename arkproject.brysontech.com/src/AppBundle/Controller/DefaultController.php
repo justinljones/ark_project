@@ -24,6 +24,8 @@ class DefaultController extends Controller
      */
     public function loginAction (Request $request)
     {
+        $authenticationUtils = $this->get('security.authentication_utils');
+        
         return $this->render('Login/login.html.twig',[                
             'username' => isset($_POST['username'])   ?$_POST['username'] : false,
             'pwd'      => isset($_POST['pwd'])        ?$_POST['pwd'] :false
